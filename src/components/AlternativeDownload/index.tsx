@@ -19,7 +19,7 @@ const FeatureList: FeatureItem[] = [
                 One must believe that there are games for Mac.
             </>
         ),
-        downloadLink: "https://example.com/macos"
+        downloadLink: "https://github.com/GameWaves/OutOfTheHole/releases/download/v0.0.1/OutOfTheHole.dmg"
     },
     {
         title: 'Windows',
@@ -29,7 +29,7 @@ const FeatureList: FeatureItem[] = [
                 A game better coded than the OS. Sorry Microsoft
             </>
         ),
-        downloadLink: "https://example.com/windows"
+        downloadLink: "https://nightly.link/GameWaves/OutOfTheHole/workflows/build-staging/develop/Client%20DEV%20-%20Windows.zip"
     },
     {
         title: 'Linux',
@@ -39,7 +39,7 @@ const FeatureList: FeatureItem[] = [
                 Warning to bearded men, we are thinking of you.
             </>
         ),
-        downloadLink: "https://example.com/linux"
+        downloadLink: "https://nightly.link/GameWaves/OutOfTheHole/workflows/build-staging/develop/Client%20DEV%20-%20Linux.zip"
     },
 ];
 

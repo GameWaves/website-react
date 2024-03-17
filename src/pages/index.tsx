@@ -32,8 +32,8 @@ export default function Home(): JSX.Element {
   const {siteConfig} = useDocusaurusContext();
   return (
     <Layout
-      title={`A friend share you ${siteConfig.title}`}
-      description="He's done the right thing, click, you're in for a real treat!">
+      title={`Home`}
+      description="Out of the Hole - A Gamewave game">
       <HomepageHeader />
       <main>
         <HomepageFeatures />
