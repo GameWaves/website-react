@@ -10,32 +10,31 @@ type FeatureItem = {
 
 const FeatureList: FeatureItem[] = [
   {
+    title: 'Play with friends',
+    Svg: require('@site/static/img/network.svg').default,
+    description: (
+      <>
+          Playing alone is good, playing with your friend is even better.
+          Out of the Hole is designed to be played with two people, so why not take advantage of it?
+      </>
+    ),
+  },
+  {
     title: 'Easy to Use',
-    Svg: require('@site/static/img/undraw_docusaurus_mountain.svg').default,
+    Svg: require('@site/static/img/fun.svg').default,
     description: (
       <>
-        Docusaurus was designed from the ground up to be easily installed and
-        used to get your website up and running quickly.
+          The simple games are the best, in Out of the Hole, there are not 36,000 quests, you just have to get off the planet.
       </>
     ),
   },
   {
-    title: 'Focus on What Matters',
-    Svg: require('@site/static/img/undraw_docusaurus_tree.svg').default,
+    title: 'Open Source',
+    Svg: require('@site/static/img/opensource.svg').default,
     description: (
       <>
-        Docusaurus lets you focus on your docs, and we&apos;ll do the chores. Go
-        ahead and move your docs into the <code>docs</code> directory.
-      </>
-    ),
-  },
-  {
-    title: 'Powered by React',
-    Svg: require('@site/static/img/undraw_docusaurus_react.svg').default,
-    description: (
-      <>
-        Extend or customize your website layout by reusing React. Docusaurus can
-        be extended while reusing the same header and footer.
+          We have the heart that the game be accessible to everyone, which is why we decided to make it open source.
+          It is therefore free, and anyone can create their own version of the game.
       </>
     ),
   },
