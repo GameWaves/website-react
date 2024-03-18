@@ -1,17 +1,29 @@
-endi:
-  name: Endilie Yacop Sucipto
-  title: Maintainer of Docusaurus
-  url: https://github.com/endiliey
-  image_url: https://github.com/endiliey.png
+louis:
+  name: Louis Gallet
+  title: Project manager @ Gamewave
+  url: https://louisgallet.fr
+  image_url: https://github.com/l0u1sg.png
 
-yangshun:
-  name: Yangshun Tay
-  title: Front End Engineer @ Facebook
-  url: https://github.com/yangshun
-  image_url: https://github.com/yangshun.png
+louise:
+  name: Louise Fussien
+  title: Marketing Manager @ Gamewave
+  url: https://github.com/louiseeeeeeeeee
+  image_url: https://github.com/louiseeeeeeeeee.png
 
-slorber:
-  name: Sébastien Lorber
-  title: Docusaurus maintainer
-  url: https://sebastienlorber.com
-  image_url: https://github.com/slorber.png
+bastien:
+  name: Bastien Pinaud
+  title: Network Manager @ Gamewave
+  url: https://github.com/Bastien1533
+  image_url: https://github.com/Bastien1533.png
+
+titouan:
+  name: Titouan Lamy
+  title: Developer @ Gamewave
+  url: https://github.com/Drakwrizz
+  image_url: https://github.com/Drakwrizz.png
+
+hugo:
+  name: Hugo Cohen
+  title: Lead Designer @ Gamewave
+  url: https://github.com/Yoplyy
+  image_url: https://github.com/Yoplyy.png
