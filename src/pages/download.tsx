@@ -64,7 +64,7 @@ export default function Download(): JSX.Element {
             <RecommandedDownload />
             <main>
                 <div className="text--center padding-horiz--md">
-                    <Heading as="h2">Or choose your OS (If we've done our job badly) </Heading>
+                    <Heading as="h2">Or choose your OS</Heading>
                     <AlternativeDownload/>
                 </div>
             </main>
