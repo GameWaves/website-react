@@ -12,8 +12,8 @@ import AlternativeDownload from "@site/src/components/AlternativeDownload";
 function RecommandedDownload() {
     // Show the good os download link based on the user's os
     const os = getOs();
-    const downloadLink = os === "win32" ? "https://example.com/windows" : "https://example.com/macos";
-    const osFriendly = os === "win32" ? "Windows" : "Mac";
+    const downloadLink = os === "Win32" ? "https://example.com/windows" : "https://example.com/macos";
+    const osFriendly = os === "Win32" ? "Windows" : "Mac";
     return (
         <header className={clsx('hero hero--primary', styles.heroBanner)}>
             <div className="container">
