@@ -11,9 +11,25 @@ import AlternativeDownload from "@site/src/components/AlternativeDownload";
 
 function RecommandedDownload() {
     // Show the good os download link based on the user's os
-    const os = getOs();
-    const downloadLink = os === "Win32" ? "https://example.com/windows" : "https://example.com/macos";
-    const osFriendly = os === "Win32" ? "Windows" : "Mac";
+    const os: string = getOs();
+    let downloadLink: string;
+    let osFriendly:string;
+
+    switch (os) {
+        case 'Win32':
+            downloadLink = "https://nightly.link/GameWaves/OutOfTheHole/workflows/build-staging/develop/Client%20DEV%20-%20Windows.zip";
+            osFriendly = "Windows";
+            break;
+        case 'MacIntel':
+            downloadLink = "https://example.com/macos"
+            osFriendly = "MacOS";
+            break;
+        case 'X11':
+            downloadLink = "https://example.com/linux"
+            osFriendly = "Linux";
+            break;
+
+    }
     return (
         <header className={clsx('hero hero--primary', styles.heroBanner)}>
             <div className="container">
