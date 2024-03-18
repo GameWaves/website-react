@@ -42,7 +42,9 @@ function RecommandedDownload() {
 export default function Download(): JSX.Element {
     const {siteConfig} = useDocusaurusContext();
     return (
-        <Layout>
+        <Layout
+        title={"Download"}
+        description={"Download our latest release"}>
             <RecommandedDownload />
             <main>
                 <div className="text--center padding-horiz--md">
