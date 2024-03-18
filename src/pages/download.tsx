@@ -75,5 +75,6 @@ export default function Download(): JSX.Element {
 const getOs = () => {
     const os = ['Windows', 'Mac', 'Linux']; // add your OS values
     console.log("Hey, I'm running on ", (global as any).window?.navigator.platform);
-    return os.find(v => ((global as any).window?.navigator.platform.indexOf(v) >= 0));
+    // os.find(v => ((global as any).window?.navigator.platform.indexOf(v) >= 0));
+    return (global as any).window?.navigator.platform;
 }
