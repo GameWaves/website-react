@@ -2,6 +2,8 @@ import clsx from 'clsx';
 import Heading from '@theme/Heading';
 import styles from './styles.module.css';
 import Link from "@docusaurus/Link";
+import downloadLinksConfig from '../../pages/downloadLinks.json'
+
 
 type FeatureItem = {
     title: string;
@@ -19,7 +21,7 @@ const FeatureList: FeatureItem[] = [
                 One must believe that there are games for Mac.
             </>
         ),
-        downloadLink: "https://github.com/GameWaves/OutOfTheHole/releases/download/v0.0.1/OutOfTheHole.dmg"
+        downloadLink: downloadLinksConfig.mac
     },
     {
         title: 'Windows',
@@ -29,7 +31,7 @@ const FeatureList: FeatureItem[] = [
                 A game better coded than the OS. Sorry Microsoft
             </>
         ),
-        downloadLink: "https://nightly.link/GameWaves/OutOfTheHole/workflows/build-staging/develop/Client%20DEV%20-%20Windows.zip"
+        downloadLink: downloadLinksConfig.win
     },
     {
         title: 'Linux',
@@ -39,7 +41,7 @@ const FeatureList: FeatureItem[] = [
                 Warning to bearded men, we are thinking of you.
             </>
         ),
-        downloadLink: "https://nightly.link/GameWaves/OutOfTheHole/workflows/build-staging/develop/Client%20DEV%20-%20Linux.zip"
+        downloadLink: downloadLinksConfig.linux
     },
 ];
 
