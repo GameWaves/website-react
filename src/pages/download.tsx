@@ -8,12 +8,46 @@ import Heading from '@theme/Heading';
 import styles from './index.module.css';
 import AlternativeDownload from "@site/src/components/AlternativeDownload";
 
-
 function RecommandedDownload() {
     // Show the good os download link based on the user's os
-    const os = getOs();
-    const downloadLink = os === "Win32" ? "https://example.com/windows" : "https://example.com/macos";
-    const osFriendly = os === "Win32" ? "Windows" : "Mac";
+    const os: string = getOs();
+    let downloadLink: string;
+    let osFriendly:string;
+    let downloadLinkText: string;
+    let downloadText: string;
+
+    switch (os) {
+        case 'Win32':
+            downloadLink = "https://nightly.link/GameWaves/OutOfTheHole/workflows/build-staging/develop/Client%20DEV%20-%20Windows.zip";
+            osFriendly = "Windows";
+            downloadText = "We are so many that we have detected your operating system and we are offering you a direct download for your Windows"
+            downloadLinkText = "⬇️ Download for Windows";
+            break;
+        case 'MacIntel':
+            downloadLink = "https://example.com/macos"
+            osFriendly = "MacOS";
+            downloadText = "We are so many that we have detected your operating system and we are offering you a direct download for your MacOS"
+            downloadLinkText = "⬇️ Download for MacOS";
+            break;
+        case 'X11':
+            downloadLink = "https://example.com/linux"
+            osFriendly = "Linux";
+            downloadText = "We are so many that we have detected your operating system and we are offering you a direct download for your Linux"
+            downloadLinkText = "⬇️ Download for Linux";
+            break;
+        case 'Linux x86_64':
+            downloadLink = "https://example.com/linux"
+            osFriendly = "Linux";
+            downloadText = "We are so many that we have detected your operating system and we are offering you a direct download for your Linux"
+            downloadLinkText = "⬇️ Download for Linux";
+            break;
+        default:
+            downloadLink = "#alternative-download"
+            osFriendly = ""
+            downloadText = "Oups, we couldn't detect your OS. Please choose your OS below."
+            downloadLinkText = "⬇️ Choose your OS below"
+
+    }
     return (
         <header className={clsx('hero hero--primary', styles.heroBanner)}>
             <div className="container">
@@ -23,13 +57,13 @@ function RecommandedDownload() {
                     Let's get started !
                 </Heading>
                 <p>
-                    We are so many that we have detected your operating system and we are offering you a direct download for your {osFriendly}.
+                    {downloadText}
                 </p>
                 <div className={styles.buttons}>
                     <Link
                         className="button button--secondary button--lg"
                         to={downloadLink}>
-                        ⬇️ Download for {osFriendly}
+                        {downloadLinkText}
                     </Link>
                 </div>
             </div>
@@ -48,8 +82,10 @@ export default function Download(): JSX.Element {
             <RecommandedDownload />
             <main>
                 <div className="text--center padding-horiz--md">
-                    <Heading as="h2">Or choose your OS (If we've done our job badly) </Heading>
+                    <section id={"alternative-download"}>
+                    <Heading as="h2">Or choose your OS</Heading>
                     <AlternativeDownload/>
+                    </section>
                 </div>
             </main>
         </Layout>
@@ -59,5 +95,6 @@ export default function Download(): JSX.Element {
 const getOs = () => {
     const os = ['Windows', 'Mac', 'Linux']; // add your OS values
     console.log("Hey, I'm running on ", (global as any).window?.navigator.platform);
-    return os.find(v => ((global as any).window?.navigator.platform.indexOf(v) >= 0));
+    // os.find(v => ((global as any).window?.navigator.platform.indexOf(v) >= 0));
+    return (global as any).window?.navigator.platform;
 }
