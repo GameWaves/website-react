@@ -7,6 +7,7 @@ import Heading from '@theme/Heading';
 
 import styles from './index.module.css';
 import AlternativeDownload from "@site/src/components/AlternativeDownload";
+import downloadLinksConfig from './downloadLinks.json'
 
 function RecommandedDownload() {
     // Show the good os download link based on the user's os
@@ -18,25 +19,25 @@ function RecommandedDownload() {
 
     switch (os) {
         case 'Win32':
-            downloadLink = "https://github.com/GameWaves/OutOfTheHole/releases/download/v0.1.0/OOTH-Windows.exe";
+            downloadLink = downloadLinksConfig.win
             osFriendly = "Windows";
             downloadText = "We are so many that we have detected your operating system and we are offering you a direct download for your Windows"
             downloadLinkText = "⬇️ Download for Windows";
             break;
         case 'MacIntel':
-            downloadLink = "https://github.com/GameWaves/OutOfTheHole/releases/download/v0.1.0/OOTH-Mac.dmg"
+            downloadLink = downloadLinksConfig.mac
             osFriendly = "MacOS";
             downloadText = "We are so many that we have detected your operating system and we are offering you a direct download for your MacOS"
             downloadLinkText = "⬇️ Download for MacOS";
             break;
         case 'X11':
-            downloadLink = "https://github.com/GameWaves/OutOfTheHole/releases/download/v0.1.0/OOTH-Linux.zip"
+            downloadLink = downloadLinksConfig.linux
             osFriendly = "Linux";
             downloadText = "We are so many that we have detected your operating system and we are offering you a direct download for your Linux"
             downloadLinkText = "⬇️ Download for Linux";
             break;
         case 'Linux x86_64':
-            downloadLink = "https://github.com/GameWaves/OutOfTheHole/releases/download/v0.1.0/OOTH-Linux.zip"
+            downloadLink = downloadLinksConfig.linux
             osFriendly = "Linux";
             downloadText = "We are so many that we have detected your operating system and we are offering you a direct download for your Linux"
             downloadLinkText = "⬇️ Download for Linux";
