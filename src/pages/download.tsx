@@ -2,7 +2,6 @@ import clsx from "clsx";
 import Link from "@docusaurus/Link";
 import useDocusaurusContext from '@docusaurus/useDocusaurusContext';
 import Layout from '@theme/Layout';
-import HomepageFeatures from '@site/src/components/HomepageFeatures';
 import Heading from '@theme/Heading';
 
 import styles from './index.module.css';
@@ -36,7 +35,7 @@ function RecommandedDownload() {
             downloadText = "We are so many that we have detected your operating system and we are offering you a direct download for your Linux"
             downloadLinkText = "⬇️ Download for Linux";
             break;
-        case 'Linux x86_64':
+        case 'Linux':
             downloadLink = downloadLinksConfig.linux
             osFriendly = "Linux";
             downloadText = "We are so many that we have detected your operating system and we are offering you a direct download for your Linux"
@@ -94,8 +93,14 @@ export default function Download(): JSX.Element {
 }
 
 const getOs = () => {
-    const os = ['Windows', 'Mac', 'Linux']; // add your OS values
-    console.log("Hey, I'm running on ", (global as any).window?.navigator.platform);
-    // os.find(v => ((global as any).window?.navigator.platform.indexOf(v) >= 0));
-    return (global as any).window?.navigator.platform;
+    let platform: string = (global as any).window?.navigator.platform;
+    if (platform == undefined) {
+        platform = "Null";
+
+    }
+    if (platform.includes("linux") || platform.includes("Linux") || platform.includes("X11")) {
+        platform = "Linux";
+    }
+    console.log("Hey, I'm running on ", platform);
+    return platform;
 }
