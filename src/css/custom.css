@@ -5,6 +5,9 @@
  */
 
 /* You can override the default Infima variables here. */
+
+@import url('https://fonts.googleapis.com/css2?family=Kode+Mono:wght@400..700&display=swap');
+
 :root {
   --ifm-color-primary: #2e8555;
   --ifm-color-primary-dark: #29784c;
@@ -32,4 +35,19 @@
 .hero{
   background: url("../../static/img/space-scaled.png") no-repeat center/100%;
   color: #FFA200;
+}
+
+body {
+  font-family: "Kode Mono", monospace;
+  /* src: url('../../static/fonts/boken-console/BrokenConsole.woff'); */
+}
+
+h1 {
+  font-family: "Broken Console";
+  src: url('../../static/fonts/boken-console/BrokenConsole.woff');
+}
+
+h3 {
+  font-family: "Broken Console";
+  src: url('../../static/fonts/boken-console/BrokenConsole.woff');
 }
